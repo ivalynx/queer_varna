@@ -74,12 +74,12 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
     }),
-    new CopyPlugin({
-      patterns: [
-        { from: "src/img", to: "img" },
+    // new CopyPlugin({
+      // patterns: [
+        //{ from: "src/img", to: "img" },
         // { from: "src/favicon", to: "" },
         // { from: "src/files", to: "files" },
-      ],
-    }),
+      // ],
+    // }),
   ],
 };
