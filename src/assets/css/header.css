@@ -18,16 +18,12 @@
   height: auto;
   object-fit: contain;
 }
-/* 
-.Menu__item {
+.main-menu {
   display: flex;
+  padding: 0 var(--padding-section);
   align-items: center;
-  gap: 0.2rem;
-  color: var(--color-navy);
-  font-size: var(--fs-menu);
-  font-weight: 500;
-  cursor: pointer;
-} */
+  gap: clamp(1rem, 0.908rem + 0.41vw, 1.4rem);
+}
 .main-menu__list {
   display: flex;
   align-items: center;
@@ -74,11 +70,17 @@
 }
 /* Иконка стрелки */
 .Arrow {
-  display: flex;
-  width: clamp(0.5rem, 0.47rem + 0.12vw, 0.6rem); /* 8px to 12px */
-  height: clamp(0.5rem, 0.47rem + 0.12vw, 0.6rem);
-  align-items: center;
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
   transition: transform 0.3s ease;
+}
+.Arrow svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .button-primary .Arrow svg path {
   stroke: var(--color-light-yellow);
@@ -89,10 +91,11 @@
   top: 100%;
   left: 0;
   background: var(--color-background);
+  border: 1px solid var(--color-background);
   min-width: 12rem; /* 240px / 20 */
   box-shadow: 0 clamp(0.31rem, 0.26rem + 0.25vw, 0.5rem) clamp(0.93rem, 0.8rem + 0.64vw, 1.5rem) rgba(0, 0, 0, 0.1);
   border-radius: clamp(0.62rem, 0.59rem + 0.12vw, 0.75rem); /* 10px to 15px */
-  padding: 0.5rem 0;
+  padding: 0.8rem 0;
   margin-top: 0;
   display: none;
   z-index: 100;
@@ -108,8 +111,12 @@
   background: transparent; 
 }
 .sub-menu .main-menu__item {
-  /* font-size: 18px; */
+  font-size: 1rem;
   padding: 0.4rem 1rem;
+  white-space: nowrap;
+}
+.sub-menu .main-menu__item:hover {
+  background-color: var(--color-yellow);
 }
 .sub-menu .menu-item-wrapper a {
   color: var(--color-navy);
