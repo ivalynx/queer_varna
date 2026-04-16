@@ -130,6 +130,9 @@
 .sub-menu .menu-item-wrapper a {
   color: var(--color-navy);
 }
+.sub-menu .menu-item-wrapper a:hover {
+  color: var(--color-purple);
+}
 .main-menu__item:hover > .sub-menu {
   display: block;
 }
