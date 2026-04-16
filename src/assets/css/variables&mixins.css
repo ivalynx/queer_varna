@@ -4,8 +4,10 @@
   --color-yellow: #F8C761;
   --color-navy: #2C273F;
   --color-purple: #585081;
+  --color-purple-hover: #7a6fb7;
   --color-light-yellow: #FFECC3;
   --color-green: #42644B;
+  --color-green-hover: #4a985f;
   --color-lilac: #D1C8FF;
   /* Spacing & Sizes */
   --spacing-main: 1.25rem; /* 20px */
