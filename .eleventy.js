@@ -5,6 +5,15 @@ import fs from "node:fs"; // Правильный импорт для файло
 import CleanCSS from "clean-css";
 
 export default function(eleventyConfig) {
+  eleventyConfig.addWatchTarget("./src/assets/css/");
+
+  eleventyConfig.setServerOptions({
+    showVersion: true,
+    domDiff: true,
+    port: 8080,
+    watch: ["_site/**/*.css"]
+  });
+
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: "bg", // Основной язык (в корне)
     errorMode: "allow-fallback",
@@ -56,9 +65,8 @@ export default function(eleventyConfig) {
         const output = new CleanCSS({}).minify(content);        
         if (output.errors.length > 0) {
           console.error("!!! Ошибка CleanCSS:", output.errors);
-          return content; // Возвращаем как есть, чтобы не терять стили
-        }
-        
+          return content;
+        }        
         return output.styles;
       }
       return content;
@@ -69,7 +77,9 @@ export default function(eleventyConfig) {
   eleventyConfig.addFilter("cssmin", (code) => {
     return new CleanCSS({}).minify(code).styles;
   });
-
+  eleventyConfig.addBundle("js", {
+  toFileDirectory: "js"
+});
   return {
     dir: {
       input: "src",

@@ -38,5 +38,8 @@
     </main>
 
     {% include "footer.njk" %}
+    
+    <link rel="stylesheet" href="{% getBundleFileUrl "js" %}">
+    <script defer src="{% getBundleFileUrl 'js' %}"></script>
 </body>
 </html>
