@@ -1,25 +1,20 @@
-{% css "file" %}src/assets/css/button.css{% endcss %}
-{% css "file" %}src/assets/css/header.css{% endcss %}
 {% css %}
-.button-primary .menu-item-wrapper {
-  background-color: var(--color-lilac);
-}
-.button-primary > .menu-item-wrapper {
-  background-color: var(--color-purple);
-}
+{% include "../assets/css/button.css" %}
+{% include "../assets/css/header.css" %}
 {% endcss %}
 
 
 <header data-layer="header" class="header section">
   <a data-layer="logotype" href="{{ "/" | locale_url }}" class="logotype">
     <img eleventy:formats="webp" src="./assets/img/logotype.png" alt="Queer Varna" class="logotype__img" />
-
+  </a>
+  
 {% macro renderNavListItem(entry) %}
 {% set itemClass = "" %}
-{% if entry.style == "primary" or entry.key == "Join" %}{% set itemClass = "button button-primary" %}{% endif %}
-{% if entry.style == "secondary" or entry.key == "Donate" %}{% set itemClass = "button button-secondary" %}{% endif %}
+{% if entry.style == "primary" %}{% set itemClass = "button button-primary" %}{% endif %}
+{% if entry.style == "secondary" %}{% set itemClass = "button button-secondary" %}{% endif %}
 
-<li class="main-menu__item Menu__item {{ itemClass }}{% if entry.url == page.url %} current{% endif %}{% if entry.children.length %} has-children{% endif %}">
+<li class="main-menu__item {{ itemClass }}{% if entry.url == page.url %} current{% endif %}{% if entry.children.length %} has-children{% endif %}">
   <div class="menu-item-wrapper">
     <a href="{{ entry.url }}">{{ entry.title }}</a>
     {% if entry.children.length %}
