@@ -3,12 +3,12 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: clamp(0.625rem, 0.5rem + 0.6vw, 1rem) 0;
+  padding: var(--padding-section) 0;
   background: var(--color-yellow);
   box-sizing: border-box;
 }
 .logotype {
-  padding-left: var(--padding-section); 
+  /* padding-left: var(--padding-section);  */
   display: flex; 
   align-items: center; 
 }
