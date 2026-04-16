@@ -47,14 +47,23 @@ export default function(eleventyConfig) {
   });
 
   eleventyConfig.addBundle("css", {
-    // transforms: [
-    //   function(content) {
-    //     if(this.type === "css") {
-    //       return new CleanCSS({}).minify(content).styles;
-    //     }
-    //     return content;
-    //   }
-    // ]
+transforms: [
+    function(content) {
+      if (this.type === "css") {
+        const minified = new CleanCSS({}).minify(content);
+        if (minified.errors.length > 0) {
+          console.warn(`[CSS Bundle Error] в файле: ${this.page.inputPath}`, minified.errors);
+          return content; 
+        }        
+        if (!minified.styles && content.length > 0) {
+          console.warn(`[CSS Bundle Warning] Контент потерян после минификации в: ${this.page.inputPath}`);
+          return content;
+        }
+        return minified.styles;
+      }
+      return content;
+    }
+  ]
   });
 
   eleventyConfig.addFilter("cssmin", (code) => {
