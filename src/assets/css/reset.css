@@ -1,0 +1,38 @@
+html { font-size: 16px; }
+@media (min-width: 768px) { html { font-size: 18px; } }
+@media (min-width: 1280px) { html { font-size: 16px; } }
+@media (min-width: 1440px) { html { font-size: 18px; } }
+@media (min-width: 1920px) { html { font-size: 20px; } }
+
+body {
+  margin: 0;
+  font-size: 1rem;  
+  font-family: var(--font-main);  
+  color: var(--color-navy);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--color-navy); 
+  font-weight: 600; 
+  line-height: 1.1;
+}
+h1 {
+  font-size: clamp(2rem, 1.55rem + 2.05vw, 3.2rem); 
+}
+h2 {
+  font-size: clamp(1.5rem, 1.2rem + 1.28vw, 2.4rem); 
+}
+h3 {
+  font-size: clamp(1.125rem, 1.05rem + 0.32vw, 1.2rem); 
+}
+h4 {
+  font-size: clamp(1.125rem, 1.108rem + 0.385vw, 1.2rem); 
+}
+h5 {
+  font-size: 1rem;
+}
+section {
+  padding: ;
+}
