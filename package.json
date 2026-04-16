@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "eleventy:serve": "npx @11ty/eleventy --serve",
-    "start": "npm run eleventy:serve",
+    "start": "npm-run-all --parallel eleventy:serve",
     "build": "npx @11ty/eleventy"
   },
   "repository": {
