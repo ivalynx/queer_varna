@@ -1,6 +1,6 @@
 ---
 title: Нашата мисия
 eleventyNavigation:
-  key: Mission
-  parent: About
+  key: Нашата мисия
+  parent: "За нас"
 ---

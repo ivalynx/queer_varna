@@ -1,7 +1,7 @@
 ---
 title: Годишно проучване
 eleventyNavigation:
-  key: Survey
-  parent: Resources
+  key: Годишно проучване
+  parent: Ресурси
   url: /assets/pdf/survey.pdf
 ---

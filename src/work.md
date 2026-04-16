@@ -1,6 +1,6 @@
 ---
 title: Какво правим
 eleventyNavigation:
-  key: Work
+  key: Какво правим
   order: 2
 ---

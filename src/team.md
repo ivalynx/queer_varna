@@ -1,6 +1,6 @@
 ---
 title: Кои сме ние?
 eleventyNavigation:
-  key: Team
-  parent: About
+  key: Кои сме ние
+  parent: "За нас"
 ---

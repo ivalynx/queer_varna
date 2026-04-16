@@ -1,6 +1,6 @@
 ---
 title: Доброволчество
 eleventyNavigation:
-  key: Volunteer
-  parent: Join
+  key: Доброволчество
+  parent: "Включи се"
 ---

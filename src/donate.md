@@ -1,7 +1,7 @@
 ---
-title: Стани дарител
-style: secondary
+title: "Стани дарител"
 eleventyNavigation:
-  key: Donate
+  key: "Стани дарител"
   order: 6
+  style: "secondary"
 ---

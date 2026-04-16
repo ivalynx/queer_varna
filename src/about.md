@@ -1,7 +1,7 @@
 ---
 title: "За нас"
 eleventyNavigation:
-  key: "About"
+  key: "За нас"
   order: 1
 ---
 

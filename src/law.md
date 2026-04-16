@@ -1,7 +1,7 @@
 ---
-title: Анти-ЛГБТИ закон
+title: Анти-ЛГБТИ закон в училищата
 eleventyNavigation:
-  key: Law
-  parent: Resources
+  key: Анти-ЛГБТИ закон в училищата
+  parent: "Ресурси"
   url: /assets/pdf/law.pdf
 ---

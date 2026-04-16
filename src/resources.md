@@ -1,6 +1,6 @@
 ---
 title: Ресурси
 eleventyNavigation:
-  key: Resources
+  key: Ресурси
   order: 4
 ---

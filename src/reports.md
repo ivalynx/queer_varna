@@ -1,6 +1,6 @@
 ---
 title: Прозрачност
 eleventyNavigation:
-  key: Transparency
-  parent: About
+  key: Прозрачност
+  parent: "За нас"
 ---

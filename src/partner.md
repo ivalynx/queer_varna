@@ -1,6 +1,6 @@
 ---
 title: Партнирай си с нас
 eleventyNavigation:
-  key: Partner
-  parent: Join
+  key: Партнирай си с нас
+  parent: "Включи се"
 ---

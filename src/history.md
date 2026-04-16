@@ -1,6 +1,6 @@
 ---
 title: История на “Куиър Варна”
 eleventyNavigation:
-  key: History
-  parent: About
+  key: История на “Куиър Варна”
+  parent: "За нас"
 ---

@@ -1,6 +1,6 @@
 ---
 title: Varna Queer Fest
 eleventyNavigation:
-  key: Fest
+  key: Varna Queer Fest
   order: 3
 ---

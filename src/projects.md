@@ -1,6 +1,6 @@
 ---
 title: Проекти
 eleventyNavigation:
-  key: Projects
-  parent: Work
+  key: Проекти
+  parent: "Какво правим"
 ---

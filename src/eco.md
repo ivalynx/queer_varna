@@ -1,6 +1,6 @@
 ---
 title: Еко-доброволчество
 eleventyNavigation:
-  key: Eco
-  parent: Work
+  key: Еко-доброволчество
+  parent: "Какво правим"
 ---

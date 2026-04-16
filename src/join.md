@@ -1,7 +1,7 @@
 ---
-title: Включи се
-style: primary
+title: "Включи се"
 eleventyNavigation:
-  key: Join
+  key: "Включи се"
+  style: "primary"
   order: 5
 ---

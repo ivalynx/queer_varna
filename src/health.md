@@ -1,7 +1,7 @@
 ---
 title: Сексуално здраве
 eleventyNavigation:
-  key: Health
-  parent: Resources
+  key: Сексуално здраве
+  parent: "Ресурси"
   url: /assets/pdf/health.pdf
 ---

@@ -1,6 +1,6 @@
 ---
 title: Месечни събития
 eleventyNavigation:
-  key: Events
-  parent: Work
+  key: Месечни събития
+  parent: "Какво правим"
 ---
