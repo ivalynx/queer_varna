@@ -1,4 +1,5 @@
 ---
+layout: "pages/base-content.njk"
 title: Анти-ЛГБТИ закон в училищата
 eleventyNavigation:
   key: Анти-ЛГБТИ закон в училищата

@@ -1,4 +1,5 @@
 ---
+layout: "pages/base-content.njk"
 title: Сексуално здраве
 eleventyNavigation:
   key: Сексуално здраве

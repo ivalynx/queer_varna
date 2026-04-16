@@ -2,62 +2,59 @@
 layout: "base.njk"
 title: "Queer Varna"
 ---
+
 {% css %}
-.AboutUs { padding: var(--spacing-main) var(--padding-section); display: flex; flex-direction: column; gap: 1.5rem; }
+
 .GoalCard { background: var(--color-light-yellow); border-radius: var(--border-radius-card); padding: 1rem 1.5rem; }
 .Partners__list { display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; }
-
-
-
-.About {
-  display: flex;
-  flex-direction: column;
-  padding: clamp(2rem, 1.6rem + 1.8vw, 3rem) var(--padding-side);
-  gap: clamp(1.5rem, 1.3rem + 0.9vw, 2rem);
-  background: var(--color-background);
-}
-.About__Content { max-width: 52.2rem; display: flex; flex-direction: row; gap: 1.5rem; }
 
 .Partners {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: clamp(1.5rem, 1.3rem + 0.9vw, 2rem) var(--padding-side);
+  padding: var(--spacing-m) var(--padding-side);
   gap: 1.2rem;
   background: var(--color-lilac);
 }
 .Partners__Title { font-size: var(--fs-h2); color: var(--color-navy); font-weight: 600; line-height: 1.1; }
 .Partners__List { display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; width: 100%; }
-.Partner__Logo { height: clamp(4rem, 3.5rem + 2vw, 6rem); width: auto; }
-{% endcss %}
+.Partner__Logo { height: auto; width: auto; }
 
-<section data-layer="about_us" class="About container">
-  <div class="About__Content">
-    <h1>Куиър Варна</div>
-    <p>Фондация „Куиър Варна“ е неправителствена организация, която работи за създаването на по-отворена, безопасна и подкрепяща среда за ЛГБТИ+ хората във Варна и региона. В контекст, в който много хора все още се сблъскват с липса на видимост и сигурност, ние изграждаме условия за общност, изразяване и взаимна подкрепа.</p>
-    <p>Чрез култура, образование и общностни инициативи създаваме пространства за видимост, подкрепа и принадлежност.</p>
-    <a href="#" class="button button-primary">Научи повече</a>
+
+{% include "./assets/css/pair.css" %}
+{% include "./assets/css/slider.css" %}
+{% endcss %}
+{% js %}
+{% include "./assets/js/slider.js" %}
+{% endjs %}
+
+<section data-layer="about_us" class="pair">
+  <div class="pair__body">
+    <h1>Куиър Варна</h1>
+    <p>Фондация „Куиър Варна“ е неправителствена организация, която работи за създаването на по-отворена, безопасна и подкрепяща среда за ЛГБТИ+ хората във Варна и региона. В контекст, в който много хора все още се сблъскват с липса на видимост и сигурност, ние изграждаме условия за общност, изразяване и взаимна подкрепа.</p>
+    <p>Чрез култура, образование и общностни инициативи създаваме пространства за видимост, подкрепа и принадлежност.</p>
+    <a href="/mission" class="button">Научи повече</a>
   </div>
 
-  <div data-layer="Frame 10" class="Frame10" style="width: 735px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: inline-flex">
-    <img alt="" data-layer="cinema" class="Cinema" style="align-self: stretch; height: 406px; border-radius: 50px" src="https://placehold.co/735x406" />
-    <div data-layer="Frame 9" class="Frame9" style="justify-content: flex-start; align-items: center; gap: 24px; display: inline-flex">
-      <div data-svg-wrapper data-layer="Ellipse 1" class="Ellipse1">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="10" cy="10" r="9.5" fill="var(--purple, #585081)" stroke="var(--navy, #2C273F)"/>
-        </svg>
+  <div class="pair__visual">
+    <div class="slider">
+    <div class="slider__track" id="slider-track">
+      <div class="slider__slide">
+        <img eleventy:formats="webp" src="assets/img/cinema.jpg" alt="slide 1">
       </div>
-      <div data-svg-wrapper data-layer="Ellipse 3" class="Ellipse3">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="10" cy="10" r="9.5" stroke="var(--navy, #2C273F)"/>
-        </svg>
+      <div class="slider__slide">
+        <img eleventy:formats="webp" src="assets/img/fest.jpg" alt="slide 2">
       </div>
-      <div data-svg-wrapper data-layer="Ellipse 2" class="Ellipse2">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="10" cy="10" r="9.5" stroke="var(--navy, #2C273F)"/>
-        </svg>
+      <div class="slider__slide">
+        <img eleventy:formats="webp" src="assets/img/obshtina.jpg" alt="slide 3">
       </div>
     </div>
+    <div class="slider__controls">
+      <button class="slider__dot slider__dot--active" aria-label="go to slide 1"></button>
+      <button class="slider__dot" aria-label="go to slide 2"></button>
+      <button class="slider__dot" aria-label="go to slide 3"></button>
+    </div>
+  </div>
   </div>
 </section>
 

@@ -1,4 +1,5 @@
 ---
+layout: "pages/base-content.njk"
 title: Кои сме ние?
 eleventyNavigation:
   key: Кои сме ние
