@@ -86,10 +86,12 @@ body:has(.menu-toggle-input:checked) {
   /* justify-content: space-between; */
   padding: 0.5rem 0;
 }
+.menu-item-wrapper.button {  
+  padding: 0.5em 1.5em;
+}
 
 .menu-item-wrapper a {  
   font-size: 1.1rem;
-  font-weight: 600;
   text-decoration: none;
   color: var(--color-navy);
   display: block;
