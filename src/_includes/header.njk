@@ -28,7 +28,7 @@
     <input type="checkbox" id="sub{{ entry.order }}" class="submenu-toggle-input">
   {% endif %}
 
-  <div class="menu-item-wrapper">
+  <div class="menu-item-wrapper {{ itemClass }}">
     <a href="{{ entry.url }}">{{ entry.title }}</a>
     {% if entry.children.length %}
       <label for="sub{{ entry.order }}" class="arrow" aria-label="Toggle submenu">
