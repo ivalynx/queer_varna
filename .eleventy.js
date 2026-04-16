@@ -47,19 +47,19 @@ export default function(eleventyConfig) {
   });
 
   eleventyConfig.addBundle("css", {
-transforms: [
+    transforms: [
     function(content) {
-      if (this.type === "css") {
-        const minified = new CleanCSS({}).minify(content);
-        if (minified.errors.length > 0) {
-          console.warn(`[CSS Bundle Error] в файле: ${this.page.inputPath}`, minified.errors);
-          return content; 
-        }        
-        if (!minified.styles && content.length > 0) {
-          console.warn(`[CSS Bundle Warning] Контент потерян после минификации в: ${this.page.inputPath}`);
-          return content;
+      if(this.type === "css") {
+        if (content.length > 0) {
+          console.log(`[CSS Bundle] Собираю бандл, общая длина: ${content.length} симв.`);
         }
-        return minified.styles;
+        const output = new CleanCSS({}).minify(content);        
+        if (output.errors.length > 0) {
+          console.error("!!! Ошибка CleanCSS:", output.errors);
+          return content; // Возвращаем как есть, чтобы не терять стили
+        }
+        
+        return output.styles;
       }
       return content;
     }
