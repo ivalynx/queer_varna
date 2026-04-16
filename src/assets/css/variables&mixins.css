@@ -14,6 +14,7 @@
   --padding-section: 1.25rem; /* 20px */
   --spacing-s: 0.75rem; /* 12px */
   --spacing-m: 1.5rem;  /* 24px */
+  --spacing-l: 1.125rem;
   --border-radius-card: 1.25rem; /* 20px */
   --border-radius-button: 1.5em;
   /* Font Sizes */
@@ -34,6 +35,7 @@
   --padding-section: 1.66rem; /* ~30px */
   --spacing-s: 0.77rem; /* ~14px */
   --spacing-m: 1.55rem; /* ~28px */
+  --spacing-l: 1.11rem; /* ~20px */
   --border-radius-card: 1.33rem; /* ~24px */
   }
 }
@@ -43,6 +45,7 @@
     --padding-section: 2rem; /* 32px */
     --spacing-s: 1rem;    /* 16px */
     --spacing-m: 2rem;    /* 32px */
+    --spacing-l: 1.5rem;    /* 24px */
     --border-radius-card: 1.5rem; /* 24px */
   }
 }
@@ -52,6 +55,7 @@
     --padding-section: 2.5rem; /* 45px */
     --spacing-s: 1rem;    /* 18px */
     --spacing-m: 2rem;    /* 36px */
+    --spacing-l: 1.5rem;    /* 27px */
     --border-radius-card: 1.5rem; /* 27px */
   }
 }
@@ -61,6 +65,7 @@
     --padding-section: 2.5rem; /* 50px */
     --spacing-s: 1rem;    /* 20px */
     --spacing-m: 2rem;    /* 40px */
+    --spacing-l: 1.4rem;    /* 28px*/
     --border-radius-card: 1.5rem; /* 30px */
   }
 }
