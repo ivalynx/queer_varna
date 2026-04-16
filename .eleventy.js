@@ -32,6 +32,32 @@ export default function(eleventyConfig) {
     outputDir: "./_site/img/",
   });
 
+  // Фильтр, чтоб автоматически закомментировать в меню пустые страницы
+  
+  // eleventyConfig.addFilter("filterNavByContent", function(navPages, collectionsAll) {
+  //   function hasContent(entry) {
+  //     const page = collectionsAll.find(p => p.url === entry.url);
+  //     const isDraft = page && page.data && page.data.draft === true;
+  //     if (isDraft) return false;
+  //     if (entry.url && entry.url.endsWith('.pdf')) return true;
+  //     const hasText = page && page.templateContent && page.templateContent.trim().length > 0;
+  //     if (hasText) return true;
+  //     if (entry.children && entry.children.length > 0) {
+  //       return entry.children.some(child => hasContent(child));
+  //     }
+  //     return false;
+  //   }
+  //   function filterRecursive(nodes) {
+  //     return nodes
+  //       .filter(node => hasContent(node))
+  //       .map(node => ({
+  //         ...node,
+  //         children: node.children ? filterRecursive(node.children) : []
+  //       }));
+  //   }
+  //   return filterRecursive(navPages);
+  // });
+
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   eleventyConfig.setBrowserSyncConfig({
