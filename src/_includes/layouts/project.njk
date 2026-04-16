@@ -1,0 +1,74 @@
+---
+layout: base.njk
+---
+<article class="project-page section container">
+  {# Навигация назад (хлебные крошки или просто кнопка) #}
+  <nav class="project-page__nav">
+    <a href="/#portfolio" class="link-back">← Вернуться в портфолио</a>
+  </nav>
+
+  <header class="project-page__header">
+    <span class="project-page__date">{{ project_date }}</span>
+    <h1 class="title title_2">{{ title }}</h1>
+    
+    {# Если есть ссылка на живой проект #}
+    {% if external_link %}
+      <a href="{{ external_link }}" class="button project-page__link" target="_blank" rel="noopener noreferrer">
+        Посмотреть сайт
+      </a>
+    {% endif %}
+  </header>
+
+  <div class="project-page__content">
+    {# Блок с основным изображением #}
+    <div class="project-page__image-wrapper">
+      <img src="/assets/img/{{ image }}" alt="{{ title }}" class="project-page__image">
+    </div>
+
+    {# Блок с информацией #}
+    <div class="project-page__content">
+    <div class="project-page__image-wrapper">
+      <img src="/assets/img/{{ image }}" alt="{{ title }}" class="project-page__image">
+      
+      {# Блок технологий оставим под картинкой или в сайдбаре #}
+      {% if tech_stack %}
+        <div class="project-page__tech">
+          <h4 class="title title_4">Стек технологий:</h4>
+          <ul class="tech-list">
+            {% for tech in tech_stack %}
+              <li class="tech-list__item">{{ tech }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="project-page__info">
+      {# 1. Поставленная задача #}
+      {% if project_task %}
+        <div class="project-section">
+          <h3 class="title title_3">Задача</h3>
+          <p>{{ project_task }}</p>
+        </div>
+      {% endif %}
+
+      {# 2. Этапы выполнения #}
+      {% if project_stages %}
+        <div class="project-section">
+          <h3 class="title title_3">Этапы работы</h3>
+          <ol class="project-stages-list">
+            {% for stage in project_stages %}
+              <li class="project-stages-list__item">{{ stage }}</li>
+            {% endfor %}
+          </ol>
+        </div>
+      {% endif %}
+
+      {# 3. Общее описание (контент из тела md файла) #}
+      <div class="project-description text-content">
+        <h3 class="title title_3">Детали реализации</h3>
+        {{ content | safe }}
+      </div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,71 @@
+---
+layout: base.njk
+---
+
+<article class="container__item section" id="advantages">
+  <p>{{ advantages_before }}</p>
+  <details class="details">
+    <summary class="details__summary">
+    {{ advantages_block.summary }}
+    </summary>
+    <dl class="details__info list-define">
+      {% for entry in advantages_block.items %}
+      <dt class="list-define__term">{{ entry.term }}</dt>
+      <dd class="list-define__defines">{{ entry.definition }}</dd>
+      {% endfor %}
+    </dl>
+  </details>
+  <p>{{ advantages_after }}</p>
+</article>
+
+<article class="container__item section" id="services">
+  <h2 class="title title_2">{{ services_before }}</h2>
+  
+  <dl class="list-define">
+    {% for service in services_list %}
+      <dt class="list-define__term">{{ service.title }}</dt>
+      <dd class="list-define__defines">
+        {# Выводим описание, если оно есть #}
+        {% if service.desc %}
+          {{ service.desc | safe }}
+        {% endif %}
+
+        {% if service.services_block %}
+          <details class="details">
+            <summary class="details__summary">
+              {{ service.services_block.summary }}
+            </summary>
+            <dl class="details__info list-define">
+              {% for entry in service.services_block.items %}
+                <dt class="list-define__term">{{ entry.term }}</dt>                
+                {% if entry.definition | is_string %}
+                  <dd class="list-define__defines">{{ entry.definition | safe }}</dd>
+                {% else %}
+                  {% for desc in entry.definition %}
+                    <dd class="list-define__defines">{{ desc | safe }}</dd>
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            </dl>
+          </details>
+        {% endif %}
+      </dd>
+    {% endfor %}
+  </dl>
+</article>
+
+<article class="container__item section" id="portfolio">
+  <h2 class="title title_2">{{ portfolio_title }}</h2>
+  <dl class="gallery">
+    {% for entry in portfolio %}
+      <dt class="gallery__image">
+        {# <img eleventy:formats="webp" src="/assets/img/{{ entry.image }}" alt="{{ entry.title }}"> #}
+      </dt>
+      <dd class="gallery__title">
+        {{ entry.title }}
+        <a href="websites/{{ entry.link }}">{{ more }}</a>
+      </dd>
+    {% endfor %}
+  </dl>
+</article>
+debug: {{ more | dump }}

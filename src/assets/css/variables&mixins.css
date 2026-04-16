@@ -1,0 +1,25 @@
+:root {
+  /* Colors */
+  --color-background: #FBF8F1;
+  --color-yellow: #F8C761;
+  --color-navy: #2C273F;
+  --color-purple: #585081;
+  --color-light-yellow: #FFECC3;
+  --color-green: #42644B;
+  --color-lilac: #D1C8FF;
+  /* Spacing & Sizes */
+  --spacing-main: clamp(1.25rem, 0.96rem + 1.28vw, 3rem);
+  --padding-section: clamp(1.25rem, 0.96rem + 1.28vw, 2.5rem);
+  --border-radius-card: clamp(1.25rem, 1.05rem + 0.64vw, 1.5rem);
+  --border-radius-button: 1.3rem;
+  /* Font Sizes */
+  --fs-h1: clamp(2rem, 1.55rem + 2.05vw, 3.2rem);
+  --fs-h2: clamp(1.5rem, 1.2rem + 1.28vw, 2.4rem);
+  --fs-h3: clamp(1.125rem, 1.05rem + 0.32vw, 1.2rem);
+  --fs-body: 1rem;
+  --fs-menu: clamp(1rem, 0.95rem + 0.25vw, 1.1rem);
+  --fs-accent-text: clamp(1.125rem, 1.067rem + 0.256vw, 1.1rem);
+  --fs-body-lg: clamp(1rem, 0.95rem + 0.25vw, 1.2rem); /* 16px to 24px */
+  /* Font*/
+  --font-main: 'Montserrat', sans-serif;
+}

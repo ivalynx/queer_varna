@@ -1,0 +1,92 @@
+{% css "file" %}./src/assets/css/button.css{% endcss %}
+{% css "file" %}./src/assets/css/header.css{% endcss %}
+{% css %}
+.button-primary .menu-item-wrapper {
+  background-color: var(--color-lilac);
+}
+.button-primary > .menu-item-wrapper {
+  background-color: var(--color-purple);
+}
+{% endcss %}
+
+
+<header data-layer="header" class="header section">
+  <a data-layer="logotype" href="{{ "/" | locale_url }}" class="logotype">
+    <img eleventy:formats="webp" src="./assets/img/logotype.png" alt="Queer Varna" class="logotype__img" />
+
+{% macro renderNavListItem(entry) %}
+{% set itemClass = "" %}
+{% if entry.style == "primary" or entry.key == "Join" %}{% set itemClass = "button button-primary" %}{% endif %}
+{% if entry.style == "secondary" or entry.key == "Donate" %}{% set itemClass = "button button-secondary" %}{% endif %}
+
+<li class="main-menu__item Menu__item {{ itemClass }}{% if entry.url == page.url %} current{% endif %}{% if entry.children.length %} has-children{% endif %}">
+  <div class="menu-item-wrapper">
+    <a href="{{ entry.url }}">{{ entry.title }}</a>
+    {% if entry.children.length %}
+      <div class="Arrow">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.625 8.25L11 16.5L1.375 8.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    {% endif %}
+  </div>
+
+  {% if entry.children.length %}
+    <ul class="sub-menu">
+      {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
+    </ul>
+  {% endif %}
+</li>
+{% endmacro %}
+
+{% set navPages = collections.all | eleventyNavigation %}
+
+<nav class="main-menu">
+  <ul class="main-menu__list">
+    {%- for entry in navPages %}
+      {% set showItem = false %}
+      {% if not lang or entry.url.startsWith("/" + lang + "/") or (lang == "bg" and not (entry.url.startsWith("/en/") or entry.url.startsWith("/ru/"))) %}
+        {% set showItem = true %}
+      {% endif %}
+
+      {% if showItem %}
+        {{ renderNavListItem(entry) }}
+      {% endif %}
+    {%- endfor -%}
+  </ul>
+</nav>
+  
+  <!--<nav class="lang-switcher">        
+    <details class="lang-switcher__details">
+      <summary class="lang-switcher__summary">
+        {{ page.lang | upper }}
+        <span class="lang-switcher__arrow" aria-hidden="true">▾</span>
+      </summary>
+      <ul class="lang-switcher__list">
+        {# Прямая логика через if без использования проблемного массива #}
+        {% if page.lang == "ru" %}
+        <li class="lang-switcher__item">
+          <a href="/" class="lang-switcher__link">BG</a>
+        </li>
+        <li class="lang-switcher__item">
+          <a href="/en/" class="lang-switcher__link">EN</a>
+        </li>
+        {% elseif page.lang == "en" %}
+        <li class="lang-switcher__item">
+          <a href="/" class="lang-switcher__link">BG</a>
+        </li>
+        <li class="lang-switcher__item">
+            <a href="/ru/" class="lang-switcher__link">RU</a>
+        </li>
+        {% elseif page.lang == "bg" %}
+        <li class="lang-switcher__item">
+          <a href="/en/" class="lang-switcher__link">EN</a>
+        </li>
+        <li class="lang-switcher__item">
+            <a href="/ru/" class="lang-switcher__link">RU</a>
+        </li>
+        {% endif %}
+      </ul>
+    </details>
+  </nav>-->
+</header>
