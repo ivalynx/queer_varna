@@ -10,17 +10,36 @@
   transition: opacity 0.3s ease;
   cursor: pointer;
   border: none;
+  background: var(--color-purple);
+  color: var(--color-light-yellow);
+  gap: 0.5em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.button-primary {
-  background: var(--color-purple);
+a.button {  
+  text-decoration: none;  
   color: var(--color-light-yellow);
+}
+.button:hover, a.button:hover {
+  background-color: var(--color-purple-hover);
+  color: var(--color-light-yellow);
+}
+.button:focus, a.button:focus {
+  border: 0.2em solid var(--color-purple-hover);
+}
+.button:active, a.button:active {
+  background-color: var(--color-green);
 }
 
 .button-secondary {
-  background: var(--color-green);
-  color: var(--color-light-yellow);
-  gap: 0.5em;
+  background-color: var(--color-green);
+}
+.button-secondary:hover {
+  background-color: var(--color-green-hover);
+}
+.button-secondary:focus, a.button-secondary:focus {
+  border: 0.2em solid var(--color-green-hover);
+}
+.button:active, a.button:active {
+  background-color: var(--color-purple);
 }

@@ -71,19 +71,7 @@
   text-decoration: none;
   color: var(--color-navy);
 }
-.button-primary .menu-item-wrapper {
-  background-color: var(--color-lilac);
-}
-.button-primary > .menu-item-wrapper {
-  background-color: var(--color-purple);
-}
-.button-primary .menu-item-wrapper a {
-  color: var(--color-light-yellow);
-}
-.button-secondary .menu-item-wrapper {
-  background-color: var(--color-green);
-}
-.button-secondary .menu-item-wrapper a {
+.button .menu-item-wrapper a {
   color: var(--color-light-yellow);
 }
 /* Иконка стрелки */
@@ -100,7 +88,7 @@
   width: 100%;
   height: 100%;
 }
-.button-primary .Arrow svg path {
+.button .Arrow svg path {
   stroke: var(--color-light-yellow);
 }
 /* Выпадающее меню */

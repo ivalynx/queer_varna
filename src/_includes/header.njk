@@ -8,10 +8,10 @@
   <a data-layer="logotype" href="{{ "/" | locale_url }}" class="logotype">
     <img eleventy:formats="webp" src="./assets/img/logotype.png" alt="Queer Varna" class="logotype__img" />
   </a>
-  
+
 {% macro renderNavListItem(entry) %}
 {% set itemClass = "" %}
-{% if entry.style == "primary" %}{% set itemClass = "button button-primary" %}{% endif %}
+{% if entry.style == "primary" %}{% set itemClass = "button" %}{% endif %}
 {% if entry.style == "secondary" %}{% set itemClass = "button button-secondary" %}{% endif %}
 
 <li class="main-menu__item {{ itemClass }}{% if entry.url == page.url %} current{% endif %}{% if entry.children.length %} has-children{% endif %}">
