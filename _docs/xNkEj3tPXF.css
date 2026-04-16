@@ -1,0 +1,32 @@
+.AboutUs { padding: var(--spacing-main) var(--padding-section); display: flex; flex-direction: column; gap: 1.5rem; }
+.GoalCard { background: var(--color-light-yellow); border-radius: var(--border-radius-card); padding: 1rem 1.5rem; }
+.Partners__list { display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; }
+
+
+
+.About {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(2rem, 1.6rem + 1.8vw, 3rem) var(--padding-side);
+  gap: clamp(1.5rem, 1.3rem + 0.9vw, 2rem);
+  background: var(--color-background);
+}
+.About__Content { max-width: 52.2rem; display: flex; flex-direction: row; gap: 1.5rem; }
+
+.Partners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(1.5rem, 1.3rem + 0.9vw, 2rem) var(--padding-side);
+  gap: 1.2rem;
+  background: var(--color-lilac);
+}
+.Partners__Title { font-size: var(--fs-h2); color: var(--color-navy); font-weight: 600; line-height: 1.1; }
+.Partners__List { display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; width: 100%; }
+.Partner__Logo { height: clamp(4rem, 3.5rem + 2vw, 6rem); width: auto; }
+.button-primary .menu-item-wrapper {
+  background-color: var(--color-lilac);
+}
+.button-primary > .menu-item-wrapper {
+  background-color: var(--color-purple);
+}

@@ -47,14 +47,14 @@ export default function(eleventyConfig) {
   });
 
   eleventyConfig.addBundle("css", {
-    transforms: [
-      function(content) {
-        if(this.type === "css") {
-          return new CleanCSS({}).minify(content).styles;
-        }
-        return content;
-      }
-    ]
+    // transforms: [
+    //   function(content) {
+    //     if(this.type === "css") {
+    //       return new CleanCSS({}).minify(content).styles;
+    //     }
+    //     return content;
+    //   }
+    // ]
   });
 
   eleventyConfig.addFilter("cssmin", (code) => {
@@ -64,7 +64,7 @@ export default function(eleventyConfig) {
   return {
     dir: {
       input: "src",
-      output: "_site",
+      output: "_docs",
       includes: "_includes",
       data: "_data"
     },
