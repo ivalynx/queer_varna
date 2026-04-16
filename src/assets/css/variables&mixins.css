@@ -8,9 +8,9 @@
   --color-green: #42644B;
   --color-lilac: #D1C8FF;
   /* Spacing & Sizes */
-  --spacing-main: clamp(1.25rem, 0.96rem + 1.28vw, 3rem);
-  --padding-section: clamp(1.25rem, 0.96rem + 1.28vw, 2.5rem);
-  --border-radius-card: clamp(1.25rem, 1.05rem + 0.64vw, 1.5rem);
+  --spacing-main: 1.25rem; /* 20px */
+  --padding-section: 1.25rem; /* 20px */
+  --border-radius-card: 1.25rem; /* 20px */
   --border-radius-button: 1.5em;
   /* Font Sizes */
   --fs-h1: clamp(2rem, 1.55rem + 2.05vw, 3.2rem);
@@ -22,4 +22,33 @@
   --fs-body-lg: clamp(1rem, 0.95rem + 0.25vw, 1.2rem); /* 16px to 24px */
   /* Font*/
   --font-main: 'Montserrat', sans-serif;
+}
+
+@media (min-width: 768px) { /* Tablet (1rem = 18px) */
+  :root {
+  --spacing-main: 1.66rem; /* ~30px */
+  --padding-section: 1.66rem; /* ~30px */
+  --border-radius-card: 1.33rem; /* ~24px */
+  }
+}
+@media (min-width: 1280px) { /* Desktop (1rem = 16px) */
+  :root {
+    --spacing-main: 2.25rem; /* 36px */
+    --padding-section: 2rem; /* 32px */
+    --border-radius-card: 1.5rem; /* 24px */
+  }
+}
+@media (min-width: 1440px) { /* Large Desktop (1rem = 18px) */
+  :root {
+    --spacing-main: 2.77rem; /* ~50px */
+    --padding-section: 2.5rem; /* 45px */
+    --border-radius-card: 1.5rem; /* 27px */
+  }
+}
+@media (min-width: 1920px) { /* XLarge Desktop (1rem = 20px) */
+  :root {
+    --spacing-main: 3rem; /* 60px */
+    --padding-section: 2.5rem; /* 50px */
+    --border-radius-card: 1.5rem; /* 30px */
+  }
 }
