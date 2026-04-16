@@ -71,6 +71,9 @@
   text-decoration: none;
   color: var(--color-navy);
 }
+.menu-item-wrapper a:hover {
+  color: var(--color-purple);
+}
 .button .menu-item-wrapper a {
   color: var(--color-light-yellow);
 }
