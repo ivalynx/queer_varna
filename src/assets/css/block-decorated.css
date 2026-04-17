@@ -1,0 +1,60 @@
+.block-decorated {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.block-decorated::before,
+.block-decorated::after {
+content: "";
+  display: block;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;  
+  height: clamp(80px, 10vw, 158px);
+  background-color: currentColor;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-mode: alpha;
+}
+
+.block-decorated::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 110' preserveAspectRatio='none'%3E%3Cpath d='M0 110C70.0788 69.5693 170.41 -58.0654 654.393 33.4097C1212.96 138.981 1539.52 -41.1552 1920 33.4097V110H0Z' fill='black'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 110' preserveAspectRatio='none'%3E%3Cpath d='M0 110C70.0788 69.5693 170.41 -58.0654 654.393 33.4097C1212.96 138.981 1539.52 -41.1552 1920 33.4097V110H0Z' fill='black'/%3E%3C/svg%3E");
+  margin-bottom: -1px;
+  max-height: 100px;
+}
+
+.block-decorated::after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 158' preserveAspectRatio='none'%3E%3Cpath d='M1920 0L0 0V43.116C147.066 118.543 313.829 179.607 377.752 119.6C505.752-0.557125 746.013-38.9263 1251.17 116.436C1682.06 248.957 1583.17 15.9847 1920 61.4017V0Z' fill='black'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 158' preserveAspectRatio='none'%3E%3Cpath d='M1920 0L0 0V43.116C147.066 118.543 313.829 179.607 377.752 119.6C505.752-0.557125 746.013-38.9263 1251.17 116.436C1682.06 248.957 1583.17 15.9847 1920 61.4017V0Z' fill='black'/%3E%3C/svg%3E");
+  margin-top: -1px;
+  max-height: 157px;
+}
+
+.block-decorated__wrapper {
+  padding: 0 var(--padding-section);
+  /* padding-bottom: var(--spacing-s); */
+}
+
+.block-decorated__lilac::after,
+.block-decorated__lilac::before {
+  color: var(--color-lilac);
+}
+.block-decorated__lilac .block-decorated__wrapper {
+  background-color: var(--color-lilac);
+}
+
+.block-decorated__yellow::after,
+.block-decorated__yellow::before {
+  color: var(--color-yellow);
+}
+.block-decorated__yellow .block-decorated__wrapper {
+  background-color: var(--color-yellow);
+}
