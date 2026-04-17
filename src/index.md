@@ -16,7 +16,7 @@ title: "Queer Varna"
 {% include "./assets/js/slider.js" %}
 {% endjs %}
 
-<section data-layer="about_us" class="section pair">
+<section class="section pair">
   <div class="pair__body">
     <h1>Куиър Варна</h1>
     <p>Фондация „Куиър Варна“ е неправителствена организация, която работи за създаването на по-отворена, безопасна и подкрепяща среда за ЛГБТИ+ хората във Варна и региона. В контекст, в който много хора все още се сблъскват с липса на видимост и сигурност, ние изграждаме условия за общност, изразяване и взаимна подкрепа.</p>
@@ -48,7 +48,7 @@ title: "Queer Varna"
 <section class="block-decorated block-decorated__yellow">
   <div class="block-decorated__wrapper">
     <h2>Нашите цели</h2>    
-    <div class="grid">
+    <div class="grid grid-3">
       <article class="card">
         <h3 class="card__title">Да подкрепяме местната ЛГБТИ+ общност</h3>
         <p class="card__text">Помогни ни чрез доброволчество в събития и инициативи</p>
@@ -67,3 +67,22 @@ title: "Queer Varna"
     </div>
   </div>
 </section>
+
+<section class="section">
+  <h2>Събития и новини</h2>
+  <div class="grid grid-4">
+    <a href="https://www.instagram.com/queervarna/p/DW1I56jDFTj/">
+      <img src="assets/img/slide1.jpg" alt="Научи повече">
+    </a>
+    <a href="https://www.instagram.com/queervarna/p/DWy_G3LjPb6/">
+      <img src="assets/img/slide2.jpg" alt="Научи повече">
+    </a>
+    <a href="https://www.instagram.com/queervarna/p/DWZc-gpDOdZ/">
+      <img src="assets/img/sliide3.jpg" alt="Научи повече">
+    </a>
+    <a href="https://www.instagram.com/queervarna/p/DWWoSpODEq8/">
+      <img src="assets/img/slide4.jpg" alt="Научи повече">
+    </a>
+  </div>
+</section>
+
