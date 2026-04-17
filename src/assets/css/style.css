@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5 {
   color: var(--color-navy); 
   font-weight: 600; 
   line-height: 1.1;
+  margin-top: 0;
 }
 h1 {
   font-size: clamp(2rem, 1.55rem + 2.05vw, 3.2rem); 
@@ -39,10 +40,6 @@ h4 {
 }
 h5 {
   font-size: 1rem;
-}
-section,
-article {
-  padding: var(--spacing-main) var(--padding-section);
 }
 img, svg, video {
   max-width: 100%;
@@ -61,4 +58,8 @@ a:focus {
 }
 a:active {
   text-decoration: none;
+}
+
+.section {
+  padding: var(--spacing-main) var(--padding-section);
 }
