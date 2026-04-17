@@ -7,12 +7,11 @@ import CleanCSS from "clean-css";
 export default function(eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/assets/css/");
 
-  eleventyConfig.setServerOptions({
-    showVersion: true,
-    domDiff: true,
-    port: 8080,
-    watch: ["_site/**/*.css"]
-  });
+  // eleventyConfig.setServerOptions({
+  //   showVersion: true,
+  //   domDiff: true,
+  //   port: 8080
+  // });
 
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: "bg", // Основной язык (в корне)
@@ -82,6 +81,7 @@ export default function(eleventyConfig) {
   });
 
   eleventyConfig.addBundle("css", {
+    toFileDirectory: "css",
     transforms: [
     function(content) {
       if(this.type === "css") {
