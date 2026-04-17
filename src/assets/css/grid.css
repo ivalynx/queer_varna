@@ -1,13 +1,45 @@
 .grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-m);
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+.grid > * {
+  flex: 1 1 100%;
+  margin: var(--spacing-m);
+}
+
+.grid > a {
+  display: block;
+  width: fit-content;
+  flex: 0 0 auto; 
+  text-decoration: none;
+  color: inherit;
+}
+
+.grid > a > img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+}
+
 
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-m);
+  justify-items: stretch;
+  width: 100%;
+  }
+  .grid > * {
+    margin: 0;
+  }
+  .grid > a {
+    width: 100%;
+  }
+  .grid > a img {
+    width: 100%;
+    object-fit: cover;
   }
   .grid > *:last-child:nth-child(odd) {
     grid-column: 1 / -1; 
