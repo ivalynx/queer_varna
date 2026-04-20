@@ -1,0 +1,29 @@
+.img-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-carousel__track {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: max-content;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.img-carousel.is-scrolling .img-carousel__track {
+  animation: marquee 20s linear infinite;
+}
+.img-carousel.is-scrolling:hover .img-carousel__track {
+  animation-play-state: running;
+}
+.img-carousel__item img {
+  height: clamp(60px, 8vw, 100px);
+  width: auto;
+  display: block;
+}
