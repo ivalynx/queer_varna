@@ -64,7 +64,9 @@ header,
 main > * {
   margin-bottom: var(--spacing-main);
 }
-
+main > *:last-of-type {
+  margin-bottom: 0;
+}
 .section {
   padding: var(--spacing-main) var(--padding-section);
 }
