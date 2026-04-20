@@ -39,7 +39,10 @@
 
 .block-decorated__wrapper {
   padding: 0 var(--padding-section);
-  /* padding-bottom: var(--spacing-s); */
+  padding-bottom: var(--spacing-s);
+}
+.block-decorated__has-bottom .block-decorated__wrapper {
+  padding-bottom: 0;
 }
 
 .block-decorated__lilac::after,
